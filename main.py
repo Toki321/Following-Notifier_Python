@@ -107,7 +107,7 @@ for id in idList:
 # print("main matrix : ", mainMatrix)
 
 def main():
-    # print("entering main():")
+    print("entering main():")
     i = 0
     newFollowingList = []
     for x in mainMatrix:
@@ -118,28 +118,28 @@ def main():
         # print("new list: ", getListName(newFollowingList[i]))
 
         toFollow = getNewFollows(mainMatrix[i], newFollowingList[i])
-        # print("toFollow arr: ", toFollow)
+        print("toFollow arr: ", toFollow)
 
         isContainSubstack = isSubstackContained(toFollow)
         
-        # print("in main arr:", isContainSubstack)
-        # print("Sending messages on Telegram..")
+        print("in main arr:", isContainSubstack)
+        print("Sending messages on Telegram..")
         sendMessage(toFollow, usernameList[i], isContainSubstack)
-        # print("end messages")
+        print("end messages")
 
         mainMatrix[i] = newFollowingList[i]
         # print("should return new list, if old has become new:")
         # print(getListName(mainMatrix[i]))
 
         i += 1
-        # print("end loop...")
+        print("end loop...")
 
-    # print("end main.....\n")
+    print("end main.....\n")
 
 
 
 while True:
-    # print("Entering while loop.. Follow now")
+    print("Entering while loop.. Follow now")
     time.sleep(910)
     main()
     
